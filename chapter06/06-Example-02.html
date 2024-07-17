@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		let list=["a","b","c","d","e","f","g","h","i","j"]
+		let best=[]
+		while(best.length<3){
+			let num=Math.floor(Math.random()*list.length)
+			best.push(list[num])
+			for(let i=0;i<best.length;i++){
+				best.sort()
+				if(best[i]===best[i+1]){
+					best.splice(i+1,1)
+				}
+			}
+		}
+		console.log(best)
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// 05-02-05.html
+		// 선언적 함수, 익명 함수의 조합
+
+		func=function(){
+			console.log("익명 함수입니다.")
+		}
+		function func(){
+			console.log("선언적 함수입니다.")
+		}
+		func()
+	</script>
+	<script>
+		namedFunc()
+		function namedFunc(){
+			console.log(`1번째 선언적 함수입니다.`)
+		}
+		</script>
+	<script>
+		function namedFunc(){
+			console.log(`2번째 선언적 함수입니다.`)
+		}
+	</script>
+	<script>
+		namedFunc()
+		// 이처럼 블록이 나뉘어진 경우에는 선언적 함수의 실행 흐름을 예측하기가 힘들어진다.
+		// 익명 함수는 코드를 읽을 때와 같은 순서로 함수가 선언된다. 
+		// 자바스크립트는 블록이 예상하지 못하게 나뉘는 문제 등이 발생할 수 있어 안전을 위해 익명 함수를 더 많이 사용하는 편
+
+		var f=function(){
+			console.log("익명 함수입니다.")
+		}
+		function f(){
+			console.log("선언적 함수입니다.")
+		}
+		f()
+		let ft=function(){
+			console.log("익명 함수입니다.")
+		}
+		// function ft(){
+		// 	console.log("선언적 함수입니다.")
+		// }
+		ft()
+		// var 키워드나 키워드가 없을 경우 함수 이름을 덮어쓰는 경우가 발생
+		// 현재의 자바스크립트는 let과 const키워드를 사용해서 변수와 상수를 선언
+		// 이러한 키워드들은 위험을 원천적으로 차단하기 위해서 오류를 발생시킴
+		// => 과거의 var키워드를 사용하기보다 let과 const키워드를 사용
+		// 함수의 선언을 통일한다면 익명 함수로 통일해서 사용하는 것이 안전을 위해 더 나은 선택
+
+	</script>
+</body>
+</html>

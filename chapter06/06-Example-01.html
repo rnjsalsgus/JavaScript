@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// 로또 번호 뽑기
+		// 1~45까지의 정수 추출
+		// let num=Math.floor(Math.random()*45+1)
+		// console.log(num)
+		// 6개를 뽑아서 배열에 저장
+		// 중복 번호 제거
+		// 1.1~45 배열에서 splice() 메소드를 이용하여 정수를 뽑으면서 배열에서 삭제 시킴
+		// 2.랜덤으로 6개를 뽑을 때 중복검사 실행(중복시 다시 뽑기)
+		let nums=[]
+		let boolean=true
+		while(nums.length<6){
+			let num=Math.floor(Math.random()*45+1)
+		// 중복 검사
+			for(let n of nums){
+				if(n===num){
+					boolean=false
+				}
+			}
+			if(boolean){
+				nums.push(num)
+				boolean=!boolean
+			}
+			else{
+				boolean=!boolean
+			}
+		}
+		nums=nums.sort((a,b)=>a-b)
+		console.log(nums)
+	</script>
+</body>
+</html>

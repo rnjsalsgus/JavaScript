@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// callback 함수
+		// 매일 걸음 수 저장하는 프로그램
+		class WalkCound{
+			#date
+			#walkCnt
+			get date(){
+				return date
+			}
+			set date(date){
+				console.log("set date()함수가 호출되었습니다.")
+				return this.#date=date
+			}
+			get walkCnt(){
+				return walkCnt
+			}
+			set walkCnt(walkCnt){
+				return this.#walkCnt=walkCnt
+			}
+			// 출력
+			printWC(){
+				console.log("---------날짜---------")
+				console.log(this.#date)
+				console.log("---------걸음 수---------")
+				console.log(this.#walkCnt)
+			}
+			// 콜백 출력 함수
+			printWithCallback(callback){
+				callback(this.#date,this.#walkCnt)
+			}
+				
+		}
+		const ex={
+			"date":"4월3일",
+			"walkCnt":"10000"
+		}
+
+		// 온점 찍고 속성에 직접 접근해서 쓰지만 get set함수가 호출
+		// const wc=new WalkCound();
+		// wc.date=new Date()
+		// wc.walkCnt=10000
+		// console.log(wc)
+
+		// 걸음 수와 날짜를 저장하는 함수
+		// function createWC(date,walkCnt){
+		// 	const wc=new WalkCound();
+		// 	wc.date=new Date(date)
+		// 	wc.walkCnt=walkCnt
+		// 	return wc
+		// }
+		// const wc1=createWC("2024-04-01",5001)
+		// const wc2=createWC("2024-04-02",5003)
+		// const wc3=createWC("2024-04-03",5005)
+		// 이번 달 걸음수 출력
+		// console.log(wc1)
+		// console.log(wc2)
+		// console.log(wc3)
+		// 데이터가 많아지면 코드가 길어짐 - 배열에 저장하기
+		const wcArr=[]
+		function createWC(date,walkCnt){
+			const wc=new WalkCound();
+			wc.date=new Date(date)
+			wc.walkCnt=walkCnt
+			wcArr.push(wc)
+		}
+		// 이번 달 걸음수 출력(함수)
+		function getWCs(){
+			for(const wc of wcArr){
+				wc.printWC()
+			}
+		}
+		createWC("2024-04-01",5001)
+		createWC("2024-04-02",5003)
+		createWC("2024-04-03",5005)
+		getWCs()
+		
+		// 콜백함수 사용
+		const wc1=wcArr[0]
+		wc1.printWC()
+		wc1.printWithCallback((d,w)=>{
+			console.log(`날짜: ${d}`)
+			console.log(`걸음수: ${w}`)
+		})
+		// const numbers=[1,2,3]
+		// numbers.forEach(v=>{
+		// 	console.log(v)
+		// })
+		wc1.printWithCallback((d,w)=>{
+			console.log(`날짜::::::::::::: ${d}`)
+			console.log(`걸음수:::::::::::: ${w}`)
+		})
+		
+	</script>
+</body>
+</html>

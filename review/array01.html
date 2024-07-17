@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// array01.html
+		// 배열(array)
+		// 여러 자료를 묶어서 활용할 수 있는 특수한 자료
+
+		// 1~10까지의 정수를 갖는 데이터
+		// let a=1
+		// .
+		// .
+		// .
+		// let j=10
+		// 많은 데이터를 변수에 하나하나 담으면 활용하기 힘듦
+		// 짝수의 합
+		let arr=[1,2,3,4,5,6,7,8,9,10]
+		let sum=0
+		for(let i=0;i<arr.length;i++){
+			if(arr[i]%2===0){
+				sum+=arr[i]
+			}
+		}
+		console.log(sum)
+
+		// 배열 요소에 접근하기
+		// 배열[인덱스] 
+		const numbers=[273,52,103,32]
+		console.log(numbers[0])
+		// 배열 안에 있는 모든 요소를 출력
+		console.log(numbers[0])
+		console.log(numbers[1])
+		console.log(numbers[2])
+		console.log(numbers[3])
+		// 배열 내에 데이터 수가 많아지면 일일히 출력하기 힘듦
+		// for문 사용
+		for(let i=0;i<numbers.length;i++){
+			console.log(numbers[i])
+		}
+
+		// 배열에 요소 추가하기 - push()
+		numbers.push(88)
+		for(let i=0;i<numbers.length;i++){
+			console.log(numbers[i])
+		}
+		// 배열에 요소 삭제하기 - splice()
+		numbers.splice(2,0)
+		for(let i=0;i<numbers.length;i++){
+			console.log(numbers[i])
+		}
+		// 배열 요소 변경하기
+		numbers[0]=42
+		for(let i=0;i<numbers.length;i++){
+			console.log(numbers[i])
+		}
+	</script>
+</body>
+</html>

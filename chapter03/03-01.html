@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// 03-01.html
+		// if 조건문
+		//  if(bool값이 나오는 표현식){
+		// 	실행식
+		// }
+		if(273<100){
+			console.log(`273<100 -> true`)
+		}
+		// 시간과 날짜 처리 라이브러리 Date
+		// 현재 시간 구하기
+		const date=new Date()
+		const h=date.getHours()
+		console.log(h)
+
+		// 오전과 오후 구하기
+		if(h<12){
+			console.log("오전입니다.")
+		}
+		if(h>12){
+			console.log("오후입니다")
+		}
+
+		// if else 조건문 사용
+		// if(조건식){
+		// 	실행문A
+		// }
+		// else {
+		// 	실행문B
+		// }
+
+		// 실행되는 문장이 하나일 때는 중괄호를 생략할 수 있다.
+		if(true) console.log("문장 한개")
+		if(true)
+			console.log("문장 한개")
+
+		// 오전과 오후 구분하기
+		if(h<12){
+			console.log("오전입니다.")
+		}
+		else{
+			console.log("오후입니다")
+		}
+		if(h<12) console.log("오전입니다.")
+		else console.log("오후입니다")
+
+		// 중첩 조건문
+		// 조건문 안에 조건문이 중첨해 사용 하는것
+		// if(조건식1){
+		// 	if(조건식2){
+
+		// 	}
+		// 	else{
+
+		// 	}
+		// }
+				
+		// else if 조건문
+
+		// if(조건식){
+		// 	실행문
+		// }
+		// else if(조건식2){
+		// 	실행문
+		// }
+		// else if(조건식3){
+		// 	실행문
+		// }
+		// else{
+		// 	실행문
+		// }
+
+		// else if 문으로 시간 파악하기
+		if(h<11){
+			console.log("아침 먹을 시간입니다")
+		}
+		else if(h<15){
+			console.log("점심 먹을 시간입니다")
+		}
+		else {
+			console.log("저녁 먹을 시간입니다")
+		}
+	</script>
+</body>
+</html>

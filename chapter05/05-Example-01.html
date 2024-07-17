@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// min()함수 - Example
+		// 배열 또는 숫자 나열을 매개변수로 넣어도 다 동작하게 하려한다.
+		// min(배열) 배열 내부에서 최솟값을 찾아주는 함수
+		// min(숫자,숫자,숫자,...)형태로 매개변수를 넣으면 숫자들 중에서 최솟값을 찾아주는 함수
+		// 매개변수로 들어온 자료형이 배열인지 숫자인지 파악
+		// 숫자자료형은 typeof 연산자를 활용
+		// 배열에 typeof 연산자를 사용하면 object(객체)라는 결과가 나온다.
+		// Array.isArray()메소드를 활용 -> 배열이면 true, 아니면 false를 리턴
+
+		function min(...items){
+			if(Array.isArray(items)){
+				let output=items[0]
+				for(const item of items){
+					if(output>item)
+					output=item
+				}
+				return output
+			}
+			else if(Array.isArray(items)){
+				let output
+				for(const item of items){
+					output=items[0]
+					if(output>item)
+					output=item
+				}
+				return output
+			}
+		}
+		const array=[15,76,85,19]
+		console.log(min(array))
+		console.log(min(78,95,322,54,16))
+	</script>
+</body>
+</html>

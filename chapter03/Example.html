@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	
+</head>
+<body>
+	<script>
+		// const number=prompt("cm 단위의 숫자를 입력해주세요")
+		// const cm=Number(number)
+		// const inch=cm*0.393701
+		// alert(`${cm}cm는 ${inch}inch 입니다`)
+
+		// const number=prompt("원의 반지름을 입력해주세요")
+		// const r=Number(number)
+		// alert(`원의 반지름: ${r}\n원의 넓이: ${3.14*r*r}\n원의 둘레: ${2*r*3.14}`)
+
+		// const number=prompt("달러 단위의 금액을 입력해주세요.")
+		// const $=Number(number)
+		// const won=$*1207
+		// alert(`달러: ${$}\n-> 원화: ${won}`)
+
+		// const a=Number(prompt("첫 번째 숫자",''))
+		// const b=Number(prompt("두 번째 숫자",''))
+// 
+		// if(a>b){
+			// alert("첫 번째로 입력한 숫자가 더 큽니다.")
+		// }
+		// else if(a===b){
+			// alert("두 숫자가 같습니다.")
+		// }
+		// else{
+			// alert("두 번째로 입력한 숫자가 더 큽니다")
+		// }
+
+		// const a = Number(prompt("월을 입력해주세요"))
+		// if(a>=3&&a<=5){
+			// alert("봄입니다")
+		// }
+		// else if(a>=6&&a<=8){
+			// alert("여름입니다.")
+		// }
+		// else if(a>=9&&a<=11){
+			// alert("가을입니다.")
+		// }
+		// else{
+			// alert("겨울입니다.")
+		// }
+			// const rawInput=prompt("태어난 해를 입력해주세요","")
+			// const year=Number(rawInput)
+			// const e=year%12
+
+			// let result
+			// switch(e){
+			// 	case 0:
+			// 	result="원숭이"
+			// 	break
+			// 	case 1:
+			// 	result="닭"
+			// 	break
+			// 	case 2:
+			// 	result="개"
+			// 	break
+			// 	case 3:
+			// 	result="돼지"
+			// 	break
+			// 	case 4:
+			// 	result="쥐"
+			// 	break
+			// 	case 5:
+			// 	result="소"
+			// 	break
+			// 	case 6:
+			// 	result="호랑이"
+			// 	break
+			// 	case 7:
+			// 	result="토끼"
+			// 	break
+			// 	case 8:
+			// 	result="용"
+			// 	break
+			// 	case 9:
+			// 	result="뱀"
+			// 	break
+			// 	case 10:
+			// 	result="말"
+			// 	break
+			// 	case 11:
+			// 	result="양"
+			// 	break
+			// }
+			// alert(`${year}년에 태어났다면 ${result}띠 입니다.`)
+
+			const rawInput=prompt("태어난 해를 입력해주세요","")
+			const year=Number(rawInput)
+			
+			let 간
+			switch(year%10){
+				case 0:
+					간="경"
+					break
+				case 1:
+					간="신"
+					break
+				case 2:
+					간="임"
+					break
+				case 3:
+					간="계"
+					break
+				case 4:
+					간="갑"
+					break
+				case 5:
+					간="을"
+					break
+				case 6:
+					간="병"
+					break
+				case 7:
+					간="정"
+					break
+				case 8:
+					간="무"
+					break
+				case 9:
+					간="기"
+					break
+			}
+			let 띠
+			switch(year%12){
+				case 0:
+					띠="신"
+					break
+				case 1:
+					띠="유"
+					break
+				case 2:
+					띠="술"
+					break
+				case 3:
+					띠="해"
+					break
+				case 4:
+					띠="자"
+					break
+				case 5:
+					띠="축"
+					break
+				case 6:
+					띠="인"
+					break
+				case 7:
+					띠="묘"
+					break
+				case 8:
+					띠="진"
+					break
+				case 9:
+					띠="사"
+					break
+				case 10:
+					띠="오"
+					break
+				case 11:
+					띠="미"
+					break
+			}
+			alert(`${year}년은 ${간}${띠} 년입니다.`)
+	</script>
+</body>
+</html>

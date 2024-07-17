@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// 06-03.html
+		// String 객체
+		// 문자열 양쪽 끝의 공백 없애기:trim()
+		// 사용자의 실수 또는 악의적인 목적으로 문자열 앞뒤에 공백이 추가되는 경우가 많음
+		// 문자열 앞뒤 공백(띄어쓰기,줄바꿈 등)을 제거할 수 있는 메소드
+		// trim()
+		const StringA=`
+		메세지를 입력하다보니 앞에 줄바꿈도 들어가고`
+		const StringB=`					앞과 뒤에 공백도 들어 가고`
+		console.log(StringA.trim())
+		console.log(StringB.trim())
+
+		// 문자열을 특정 기호로 자르기:split()
+		// 문자열이 매개변수로 들어오는 문자열로 잘라서 배열을 리턴하는 메소드
+		input=`달러,엔,유로`
+		// 첫번째 돈의 단위로 출력
+		const mArr=input.split(",")
+		console.log(mArr)
+		console.log(mArr[0])
+		console.log(mArr[1])
+		console.log(mArr[2])
+
+		// Math객체
+		// 랜덤한 숫자 만들기:Math.random()
+		// 0~1사이의 랜덤한 숫자를 리턴
+		console.log(Math.random())
+		// Math.random(()*범위를 지정하는 수+시작숫자
+		console.log(`0부터 10사이의 랜덤한 숫자:`, Math.random()*10)
+		console.log(`0부터 50사이의 랜덤한 숫자:`, Math.random()*50)
+		// Maht.floor(x)
+		// 인수보다 작거나 같은 수 중에서 큰 정수를 반환
+		console.log(`-5부터 5사이의 랜덤한 정수숫자:`, Math.floor(Math.random()*10-5))
+		console.log(`-25부터 25사이의 랜덤한 정수숫자:`, Math.floor(Math.random()*50-25))
+	
+
+	</script>
+</body>
+</html>

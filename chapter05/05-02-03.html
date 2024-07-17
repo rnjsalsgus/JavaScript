@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// 05-02-03.html
+		// 코드가 여러곳에서 사용되면 변수 이름이 충돌할 가능성이 높다.
+		// 이름 충돌 문제
+		let pi=3.14
+		console.log(`파이 값은 ${pi}입니다.`)
+		</script>
+	<script>
+		// let pi=3.141592
+		// console.log(`파이 값은 ${pi}입니다.`)
+		
+		// 변수가 존재하는 범위를 스코프(scope)라 하며 이 스코프가 같은 단계에 있을 경우 충돌이 일어남
+		// 함수를 생성해서 블록 만들어 해결
+		function sample(){
+			let pi=3.141592
+			console.log(`파이 값은 ${pi}입니다.`)
+		}
+		sample();
+		
+		// 즉시 호출 함수(IEFI)
+		// (function(){})()
+		(function (){
+			let pi=3.1415
+			console.log(`파이 값은 ${pi}입니다.`)
+		})()
+		
+		// 블록을 사용한 스코프 생성
+		{
+			let pi=3.1415922653
+			console.log(`파이 값은 ${pi}입니다.`)
+		}
+	</script>
+</body>
+</html>
